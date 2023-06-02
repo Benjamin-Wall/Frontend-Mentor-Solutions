@@ -7,4 +7,4 @@ I am planning to complete as many challenges as I can. All projects are hosted o
 
 Challenges                    | Stacks          | Repo | Demo
 :---                          |      :---:      | :---:  | :---:
-| 1. QR Code Component  |  HTML, CSS, Flexbox  | [Repo]() |[Live]()
+| 1. QR Code Component  |  HTML, CSS, Flexbox  | [Repo](https://github.com/Benjamin-Wall/Frontend-Mentor-Solutions/tree/main/qr-code-component) |[Live](https://frontend-mentor-solutions-blush.vercel.app/)
