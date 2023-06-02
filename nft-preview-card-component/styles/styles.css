@@ -1,0 +1,116 @@
+:root {
+    --primary-soft-blue: 215, 51%, 70%;
+    --primary-cyan: 178, 100%, 50%;
+
+    --very-dark-blue-main-BG: 217, 54%, 11%;
+    --very-dark-blue-card-BG: 216, 50%, 16%;
+    --very-dark-blue-line: 215, 32%, 27%;
+    --white: 0, 0%, 100%
+
+    --font-p: 18px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(var(--very-dark-blue-main-BG));
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    padding: 1.5rem 1.5rem 0.7rem 1.5rem;
+    border-radius: 0.7rem;
+    background-color: hsl(var(--very-dark-blue-card-BG));
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.4rem;
+}
+
+.content h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.content p {
+    color: hsl(var(--primary-soft-blue));
+    font-size: var(--p-font);
+    font-weight: 300;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0.4rem;
+}
+
+.bottom-content .left {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: hsl(var(--primary-cyan));
+
+}
+
+.bottom-content .right{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: hsl(var(--primary-soft-blue));
+}
+
+.footer {
+    color: hsl(var(--primary-soft-blue));
+    margin-top: 20px;
+    border-top: hsl(var(--very-dark-blue-line)) 1px solid;
+    width: 100%;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.footer img {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 25px;
+}
+
+.white {
+    color: white;
+}
+
+.attribution {
+    margin: 1rem;
+}
+
+.attribution a {
+    color: hsl(var(--primary-cyan));
+    text-decoration: none;
+}
