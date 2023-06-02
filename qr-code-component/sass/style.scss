@@ -1,0 +1,52 @@
+@import "variables";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  background-color: $lightGray;
+}
+
+.card {
+  text-align: center;
+  background-color: $white;
+  width: 320px;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 20px;
+
+  .card-img img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-text {
+    h1 {
+      color: $darkBlue;
+      font-weight: $main-font-weight;
+    }
+
+    p {
+      color: $grayishBlue;
+      font-weight: $secondary-font-weight;
+    }
+  }
+}
