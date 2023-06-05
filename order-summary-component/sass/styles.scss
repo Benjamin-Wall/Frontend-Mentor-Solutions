@@ -1,0 +1,160 @@
+@use "./normalize";
+@use "./variables";
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Red Hat Display", sans-serif;
+	background-color: hsl(variables.$primary-pale-blue);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	margin: 20px;
+	max-width: 328px;
+	border-radius: 0.5rem;
+	background-color: white;
+	box-shadow: 0 0 10px 0 hsla(0, 0%, 0%, 0.1);
+	overflow: hidden;
+	border-radius: 1rem;
+	
+	.img-wrapper img {
+		width: 100%;
+		height: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.content-wrapper {
+		text-align: center;
+		padding: 5%;
+		h1 {
+			font-size: 1.4rem;
+			font-weight: 900;
+		}
+
+		p {
+			font-size: variables.$font-size-p;
+			color: hsl(variables.$neutral-desaturated-blue);
+		}
+
+		.pricing {
+			display: flex;
+			margin-top: 2rem;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 0.5rem;
+			height: 75px;
+			background-color: hsl(variables.$neutral-very-pale-blue);
+
+			.pricing-left {
+				display: flex;
+				gap: 0.5rem;
+				align-items: center;
+
+				img {
+					height: 50px;
+					width: auto;
+					margin-left: 1rem;
+				}
+
+				.pricing-details {
+					h2 {
+						font-size: variables.$font-size-p;
+						margin: 0;
+						padding: 0;
+					}
+
+					p {
+						line-height: 1.7;
+						margin: 0;
+						padding: 0;
+
+					}
+				}
+			}
+
+			.pricing-right {
+				margin-right: 1rem;
+
+				a {
+					opacity: 1;
+
+					&:hover {
+						color: hsl(variables.$primary-bright-blue);
+						text-decoration: none;
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+
+		.button-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-top: 1.5rem;
+
+			button {
+				all: unset;
+				color: white;
+				width: 100%;
+				padding: 1rem 0;
+				border-radius: 0.5rem;
+				background-color: hsl(variables.$primary-bright-blue);
+				box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .25);
+				margin: 1rem;
+				font-weight: 700;
+				
+				&:hover {
+					opacity: 0.8;
+					cursor: pointer;
+				}
+			}
+
+			a {
+				color: hsl(variables.$neutral-desaturated-blue);
+				font-size: variables.$font-size-p;
+				text-decoration: none;
+				margin: 1rem;
+				font-weight: 700;
+
+				&:hover {
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+.attribution {
+	a {
+		color: hsl(variables.$primary-bright-blue);
+		opacity: 1;
+		text-decoration: none;
+		font-size: variables.$font-size-p;
+		font-weight: 700;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
