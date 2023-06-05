@@ -9,3 +9,4 @@ Challenges                    | Stacks          | Repo | Demo
 :---                          |      :---:      | :---:  | :---:
 | 1. QR Code Component  |  HTML, CSS, Flexbox  | [Repo](https://github.com/Benjamin-Wall/Frontend-Mentor-Solutions/tree/main/qr-code-component) |[Live](https://frontend-mentor-solutions-blush.vercel.app/)
 | 2. NFT Preview Card Component  |  HTML, CSS, Flexbox  | [Repo](https://github.com/Benjamin-Wall/Frontend-Mentor-Solutions/tree/main/nft-preview-card-component) |[Live](https://frontend-mentor-solutions-7e6i.vercel.app/)
+| 2. Order Summary Component  |  HTML, SCSS, Flexbox  | [Repo](https://github.com/Benjamin-Wall/Frontend-Mentor-Solutions/tree/main/order-summary-component) |[Live](https://frontend-mentor-solutions-tvrc.vercel.app/)
