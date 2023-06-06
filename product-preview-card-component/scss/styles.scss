@@ -1,0 +1,143 @@
+@use "./variables" as var;
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var.$cream;
+}
+
+.card {
+    width: 46rem;
+    margin-inline: 3rem;
+    background: var.$white;
+    display: flex;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 1rem;
+
+    .image-wrapper {
+        flex: 0 0 50%;
+        width: 100%;
+        background-image: url("../assets/images/image-product-desktop.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1px;
+        padding: 2rem;
+
+        .subtitle {
+            font-family: var.$font-montserrat;
+            letter-spacing: 0.5rem;
+        }
+
+        .title {
+            font-weight: 700;
+            font-family: var.$font-francues;
+            margin: 1rem 0;
+        }
+
+        .description {
+            max-width: 300px;
+            color: var.$dark-grayish-blue;
+            font-size: var.$font-size-lg;
+            font-family: var.$font-montserrat;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-family: var.$font-francues;
+
+            p {
+                color: var.$dark-cyan;
+                font-size: 2rem;
+                font-weight: 700;
+
+                &:nth-child(2) {
+                    font-weight: initial;
+                    font-size: var.$font-size-sm;
+                    color: var.$dark-grayish-blue;
+                    font-family: var.$font-montserrat;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+        .button {
+            button {
+                all: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+                font-weight: 500;
+                width: 100%;
+                padding: 1rem 0;
+                border-radius: 0.5rem;
+                color: var.$white;
+                background: var.$dark-cyan;
+                font-family: var.$font-montserrat;
+
+                &:hover {
+                    background: var.$darker-cyan;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .card {
+        flex-direction: column;
+
+        .image-wrapper {
+            flex: 1 1 100%;
+            width: 100%;
+            background-image: url("../assets/images/image-product-mobile.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
