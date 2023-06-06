@@ -1,0 +1,207 @@
+@use "./variables.scss" as var;
+
+@font-face {
+    font-family: "Hanken Grotesk";
+    font-display: swap;
+    font-weight: 100 900;
+    src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var.$white;
+    overflow: hidden;
+    max-width: 46rem;
+    border-radius: 0 0 2rem 2rem;
+
+    .result-section,
+    .summary-section {
+        flex-basis: 50%;
+        padding: 40px 48px;
+    }
+
+    .result-section {
+        display: grid;
+        align-items: start;
+        gap: 1rem;
+        text-align: center;
+        color: var.$white;
+        border-radius: inherit;
+        background: var.$gradient-primary;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var.$light-lavender;
+        }
+
+        .score-section {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: var.$gradient-to-transparent;
+            display: grid;
+            place-content: center;
+
+            p {
+                font-size: var.$font-size-p;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                color: var.$light-lavender;
+
+                span {
+                    color: var.$white;
+                    display: block;
+                    font-size: 4rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .grade-section {
+            h2 {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            p {
+                color: var.$light-lavender;
+                font-size: var.$font-size-p;
+                font-weight: 500;
+                height: 75px;
+            }
+        }
+    }
+
+    .summary-section {
+        display: grid;
+        gap: 1rem;
+
+        .summary-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0.5rem;
+            padding: 1rem;
+
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+
+            &[data-type="reaction"] {
+                color: var.$light-red;
+                background-color: var.$light-red-alpha;
+            }
+
+            &[data-type="memory"] {
+                color: var.$orangey-yellow;
+                background-color: var.$orangey-yellow-alpha;
+            }
+
+            &[data-type="verbal"] {
+                color: var.$green-teal;
+                background-color: var.$green-teal-alpha;
+            }
+
+            &[data-type="visual"] {
+                color: var.$cobalt-blue;
+                background-color: var.$cobalt-blue-alpha;
+            }
+
+            .summary-item-header {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 700;
+            }
+
+            .summary-item-score {
+                display: flex;
+                gap: 0.5rem;
+                font-weight: 800;
+
+
+                p {
+                    opacity: 0.5;
+                    color: black;
+                }
+
+                span {
+                    color: black;
+                }
+            }
+        }
+
+        button {
+            all: unset;
+            color: var.$white;
+            margin-top: 1.2rem;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 999rem;
+            background-color: var.$dark-gray-blue;
+
+            &:hover {
+                cursor: pointer;
+                background: var.$gradient-primary;
+            }
+        }
+    }
+}
+
+.attribution {
+    margin: 2rem;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .card {
+        border-radius: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        flex-direction: row;
+    }
+
+}
