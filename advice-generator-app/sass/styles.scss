@@ -1,0 +1,117 @@
+@use "./variables" as var;
+
+@font-face {
+    font-family: 'Manrope';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: var.$light-cyan;
+    font-family: var.$font-monrope;
+    background-color: var.$dark-blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var.$dark-grayish-blue;
+    min-width: 320px;
+    max-width: 550px;
+    margin-inline: 1rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: relative;
+
+
+    .card__title {
+        h1 {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1rem;
+            color: var.$neon-green;
+            margin: 1rem 0;
+        }
+    }
+
+    .card__advice {
+        p {
+            font-weight: 800;
+            font-size: var.$font-size-quote;
+        }
+    }
+
+    .card__divider {
+        margin: 1rem 0 3rem 0;
+        width: 100%;
+        height: 20px;
+        background-image: url('../assets/images/pattern-divider-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (min-width: 475px) {
+            background-image: url('../assets/images/pattern-divider-desktop.svg');
+        }
+    }
+
+    .card__button--dice {
+        all: unset;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 666%;
+        padding: .5rem;
+        background-image: url('../assets/images/icon-dice.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var.$neon-green;
+        bottom: -30px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 10px 0 var.$neon-green;
+        }
+    }
+}
+
+.attribution {
+    text-align: center;
+    margin: 3rem 1rem;
+    a {
+        font-weight: 800;
+        color: var.$neon-green;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
