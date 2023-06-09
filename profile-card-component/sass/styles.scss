@@ -1,0 +1,104 @@
+@use "./variables" as var;
+
+@font-face {
+    font-family: 'Kumbh Sans';
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('../assets/fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf') format('truetype');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: var.$font-size;
+    font-family: var.$font-kumbh-sans;
+}
+
+body {
+    background: url("../assets/images/bg-pattern-bottom.svg") bottom -600px right -150px no-repeat, url("../assets/images/bg-pattern-top.svg") top -500px left -200px no-repeat;
+    background-color: var.$dark-cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-inline: 1rem;
+    width: 400px;
+    background: #fefefe;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .card-header img {
+        width: 100%;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 1.5rem 0;
+
+        .profile-picture {
+            position: absolute;
+            transform: translateY(-50%);
+            border-radius: 666%;
+            outline: 0.3rem solid white;
+        }
+
+        .bio {
+            color: var.$very-dark-desaturated-blue;
+            font-size: 0.5rem;
+            text-align: center;
+            margin-top: 3.5rem;
+
+            .bio-header span {
+                color: var.$dark-gray;
+                font-weight: 400;
+            }
+
+            .bio-location {
+                color: var.$dark-gray;
+                margin-top: 0.4rem;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .card-footer {
+        text-align: center;
+        border-top: 1px solid var.$dark-line;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        align-content: center;
+        padding: 1rem;
+
+        .card-stat {
+            .card-stat-number {
+                font-weight: 700;
+                color: var.$very-dark-desaturated-blue;
+            }
+
+            .card-stat-subheading {
+                font-weight: 400;
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+                color: var.$dark-grayish-blue;
+            }
+        }
+    }
+}
