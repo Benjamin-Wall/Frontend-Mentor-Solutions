@@ -1,0 +1,61 @@
+$themes: (
+    "theme-1": ("bg-main": hsl(222, 26%, 31%),
+        "bg-toggle-keypad": hsl(223, 31%, 20%),
+        "bg-screen": hsl(224, 36%, 15%),
+
+        "key-reset-del-bg": hsl(225, 21%, 49%),
+        "key-reset-del-sh": hsl(224, 28%, 35%),
+        "key-equals-toggle-bg": hsl(6, 63%, 50%),
+        "key-equals-toggle-sh": hsl(6, 70%, 34%),
+        "key-normal-bg": hsl(30, 25%, 89%),
+        "key-normal-sh": hsl(28, 16%, 65%),
+
+        "txt-calc-display": hsl(0, 0%, 100%),
+        "txt-button-primary": hsl(221, 14%, 31%),
+        "txt-button-secondary": hsl(0, 0%, 100%),
+        "txt-button-optional": hsl(0, 0%, 100%)),
+
+    "theme-2": ("bg-main": hsl(0, 0%, 90%),
+        "bg-toggle-keypad": hsl(0, 5%, 81%),
+        "bg-screen": hsl(0, 0%, 93%),
+
+        "key-reset-del-bg": hsl(185, 42%, 37%),
+        "key-reset-del-sh": hsl(185, 58%, 25%),
+        "key-equals-toggle-bg": hsl(25, 98%, 40%),
+        "key-equals-toggle-sh": hsl(25, 99%, 27%),
+        "key-normal-bg": hsl(45, 7%, 89%),
+        "key-normal-sh": hsl(35, 11%, 61%),
+
+        "txt-calc-display": hsl(60, 10%, 19%),
+        "txt-button-primary": hsl(60, 10%, 19%),
+        "txt-button-secondary": hsl(0, 0%, 100%),
+        "txt-button-optional": hsl(0, 0%, 100%),
+    ),
+    "theme-3": ("bg-main": hsl(268, 75%, 9%),
+        "bg-toggle-keypad": hsl(268, 71%, 12%),
+        "bg-screen": hsl(268, 71%, 12%),
+
+        "key-reset-del-bg": hsl(281, 89%, 26%),
+        "key-reset-del-sh": hsl(285, 91%, 52%),
+        "key-equals-toggle-bg": hsl(176, 100%, 44%),
+        "key-equals-toggle-sh": hsl(177, 92%, 70%),
+        "key-normal-bg": hsl(268, 47%, 21%),
+        "key-normal-sh": hsl(290, 70%, 36%),
+
+        "txt-calc-display": hsl(52, 100%, 62%),
+        "txt-button-primary": hsl(52, 100%, 62%),
+        "txt-button-secondary": hsl(0, 0%, 100%),
+        "txt-button-optional": hsl(198, 20%, 13%),
+    )
+);
+
+@each $theme-name,
+$properties in $themes {
+    .#{$theme-name} {
+
+        @each $name,
+        $property in $properties {
+            --#{$name}: #{$property};
+        }
+    }
+}

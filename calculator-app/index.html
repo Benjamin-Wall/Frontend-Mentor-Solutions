@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- META STUFF -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- CSS STUFF -->
+		<link rel="stylesheet" href="./css/styles.css" />
+
+		<!-- JAVASCRIPT STUFF -->
+		<script src="./js/script.js" defer></script>
+
+		<!-- SITE ICON -->
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+		<!-- SITE TITLE -->
+		<title>Frontend Mentor | Calculator app</title>
+	</head>
+	<body class="theme-1">
+		<section class="calculator">
+			<div class="calculator__header">
+				<h1 class="calculator__title">calc</h1>
+
+				<div class="calculator__theme__switcher">
+				
+					<div class="option">
+						<label for="1">1</label>
+						<input type="radio" name="themeSwitcher" id="1" checked>
+					</div>
+					
+					<div class="option">
+						<label for="2">2</label>
+						<input type="radio" name="themeSwitcher" id="2">
+					</div>
+
+					<div class="option">
+						<label for="3">3</label>
+						<input type="radio" name="themeSwitcher" id="3">
+					</div>
+				</div>
+			</div>
+
+			<div class="calculator__display">
+				<div class="calculator__display--secondary" id="calculator-display-secondary"></div>
+				<div class="calculator__display--primary" id="calculator-display-primary"></div>
+			</div>
+
+			<div class="calculator__button__wrapper">
+				<button class="calculator__button" id="number-7" data-number>7</button>
+				<button class="calculator__button" id="number-8" data-number>8</button>
+				<button class="calculator__button" id="number-9" data-number>9</button>
+				<button class="calculator__button" id="delete">DEL</button>
+				<button class="calculator__button" id="number-4" data-number>4</button>
+				<button class="calculator__button" id="number-5" data-number>5</button>
+				<button class="calculator__button" id="number-6" data-number>6</button>
+				<button class="calculator__button" id="plus"  data-operation>+</button> 
+				<button class="calculator__button" id="number-1" data-number>1</button>
+				<button class="calculator__button" id="number-2" data-number>2</button>
+				<button class="calculator__button" id="number-3" data-number>3</button>
+				<button class="calculator__button" id="minus"  data-operation>-</button> 
+				<button class="calculator__button" id="decimal" data-number>.</button>
+				 <button class="calculator__button" id="number-0" data-number>0</button>
+				<button class="calculator__button" id="divide"  data-operation>/</button>
+				<button class="calculator__button" id="times"  data-operation>x</button>
+				<button class="calculator__button" id="reset">RESET</button>
+				<button class="calculator__button" id="equals">=</button>
+		</section>
+
+		<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Benjamin-Wall">Benjamin Wall</a>.
+  </div>
+	</body>
+</html>
